@@ -12,9 +12,12 @@
  */
 int main() {
     double length = 0,
-            PI = 3.1415;
-    for(int i = 1 ; i <= 20 ;  i ++ ) {
-        length = cos(PI/2 * 0.05 * i)* 100;
+            X = 0;
+    // x 控制横坐标
+    for(int x = 100 ; x > 0 ;x -= 5 ) {
+        // 0 - 1
+        X = (double)x/100;
+        length = acos(X) * 100;
         for(int j = 0 ; j < length ; j += 3)
             printf(" ");
         printf("*\n");
